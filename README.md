@@ -1,4 +1,5 @@
 Projeto 2° - CaixaVerso JAVA Nível I
+
 📋 Informações do Projeto
 
 Programa: CaixaVerso JAVA Nível I
@@ -10,9 +11,6 @@ José Ricardo Fonseca Xavier Júnior
 Sivaldo De Oliveira Barbosa
 Thiago Fernando Prazeres De Lima
 
-🎯 Sobre o Projeto
-
-Adicione aqui uma breve descrição do que o projeto faz, seus objetivos e funcionalidades principais.
 
 🚀 Tecnologias Utilizadas
 Java
