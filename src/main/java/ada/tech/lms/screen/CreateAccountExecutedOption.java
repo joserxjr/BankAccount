@@ -23,8 +23,8 @@ public class CreateAccountExecutedOption implements ExecutedOption {
 		System.out.println("Informe o Nome do usuário");
 		var name = scanner.next();
 		var generatedAccountNumber = generateAccountNumber();
-		bankService.addAccount(new SimpleAccount(generatedAccountNumber, new User(cpf,name), 0.0));
-		System.out.println("Conta criada com sucesso");
+        bankService.addAccount(new SimpleAccount(generatedAccountNumber, new User(cpf,name), 0.0));
+        System.out.println("Conta criada com sucesso");
 	}
 
 	private String generateAccountNumber() {

@@ -1,24 +1,36 @@
 package ada.tech.lms.service;
 
+import ada.tech.lms.Persistence.AccountPersistence;
 import ada.tech.lms.domain.BankAccount;
+import ada.tech.lms.domain.TransactionType;
 import ada.tech.lms.domain.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BankService {
+
+    public BankService() {
+        this.accounts = accountPersistence.loadAll(); // construtor lê arquivo assim que programa é iniciado
+    }
+
     private List<BankAccount> accounts = new ArrayList<>();
+    private AccountPersistence accountPersistence = new AccountPersistence();
+
 
     public void addAccount(BankAccount account) {
         accounts.add(account);
+        accountPersistence.saveAllAsync(accounts).join(); //apaga todas contas e salva novamente com nova conta
     }
 
     public void deposit(String accountNumber, double amount) {
         findAccount(accountNumber).deposit(amount);
+        accountPersistence.saveAllAsync(accounts).join(); //apaga todas contas e salva novamente com novo saldo
     }
 
     public void withdraw(String accountNumber, double amount) {
         findAccount(accountNumber).withdraw(amount);
+        accountPersistence.saveAllAsync(accounts).join(); //apaga todas contas e salva novamente com novo saldo
     }
 
 

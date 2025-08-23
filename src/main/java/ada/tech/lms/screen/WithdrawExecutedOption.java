@@ -23,7 +23,7 @@ public class WithdrawExecutedOption implements ExecutedOption {
 		var value = scanner.nextDouble();
 		BankAccount account = bankService.findAccountByUser(userAccount);
 		account.getBalance();
-		account.withdraw(value);
+        bankService.withdraw(bankService.findAccountByUser(userAccount).getAccountNumber(), value);
 
 	}
 }

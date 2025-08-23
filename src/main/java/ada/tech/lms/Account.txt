@@ -1,0 +1,5 @@
+515542,123,jose,850000.0,SimpleAccount
+660120,124,thiago,0.0,SimpleAccount
+441837,125,sivaldo,0.0,SimpleAccount
+476356,129,isabella,0.0,SimpleAccount
+083752,234,carlos,0.0,SimpleAccount
