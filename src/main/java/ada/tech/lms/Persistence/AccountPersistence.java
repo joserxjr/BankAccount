@@ -2,9 +2,7 @@ package ada.tech.lms.Persistence;
 
 import ada.tech.lms.domain.BankAccount;
 import ada.tech.lms.domain.SimpleAccount;
-
 import ada.tech.lms.domain.User;
-
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,7 +13,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
-
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -40,8 +37,6 @@ public class AccountPersistence {
         }
         return caminho;
     }
-
-
 
     public List<BankAccount> loadAll(){
         List<BankAccount> accounts = new ArrayList<>();
